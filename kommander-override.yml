@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kommander-overrides
+  namespace: kommander
+data:
+  values.yaml: |
+    kommander-licensing:
+      defaultEnterpriseApps:
+        - "centralized-grafana"
+        - "karma"
+        - "karma-traefik"
+        - "prometheus-thanos-traefik"
+        - "thanos"
+        - "nkp-insights-management"
+      defaultProApps:
+        - "kubernetes-dashboard"
+        - "kubetunnel"
+        - "grafana-logging"
+        - "grafana-loki-v3"
+        - "kube-prometheus-stack"
+        - "logging-operator"
+        - "prometheus-adapter"
+        - "velero"
+        - "cilium-hubble-relay-traefik"
+        - "cloudnative-pg"
